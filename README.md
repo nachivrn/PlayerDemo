@@ -1,8 +1,8 @@
 ## REST API
 
 The service should expose two REST endpoints:
-GET /api/players - returns the list of all players
-GET /api/players/{playerID} - returns a single player by it's ID
+* `GET /api/players` - returns the list of all players
+* `GET /api/players/{playerID}` - returns a single player by it's ID
 
 ## Additional Requirements:
 
