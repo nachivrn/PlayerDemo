@@ -14,7 +14,7 @@ import java.io.File;
 import java.util.List;
 
 @Component
-class PlayerServiceCommandLineRunner implements CommandLineRunner {
+class PlayersBootStrapCommandLineRunner implements CommandLineRunner {
 
     @Autowired
     private PlayerRepository playerRepository;
