@@ -1,66 +1,63 @@
 package com.playersDemo.domain;
 
+import com.opencsv.bean.CsvBindByName;
+
 import javax.persistence.Entity;
+import javax.persistence.FieldResult;
 import javax.persistence.Id;
 
 @Entity
 public class Player {
 
     @Id
+    @CsvBindByName
     private String playerID;
-
+    @CsvBindByName
     private String birthYear;
-
+    @CsvBindByName
     private String birthMonth;
-
+    @CsvBindByName
     private String birthDay;
-
+    @CsvBindByName
     private String birthCountry;
-
+    @CsvBindByName
     private String birthState;
-
+    @CsvBindByName
     private String birthCity;
-
+    @CsvBindByName
     private String  deathYear;
-
+    @CsvBindByName
     private String deathMonth;
-
+    @CsvBindByName
     private String deathDay;
-
+    @CsvBindByName
     private String deathCountry;
-
+    @CsvBindByName
     private String deathState;
-
+    @CsvBindByName
     private String deathCity;
-
+    @CsvBindByName
     private String nameFirst;
-
+    @CsvBindByName
     private String nameLast;
-
+    @CsvBindByName
     private String nameGiven;
-
+    @CsvBindByName
     private String weight;
-
+    @CsvBindByName
     private String height;
-
+    @CsvBindByName
     private String bats;
 
-    public String getThrowsBall() {
-        return throwsBall;
-    }
-
-    public void setThrowsBall(String throwsBall) {
-        this.throwsBall = throwsBall;
-    }
-
-    private String throwsBall;
-
+    @CsvBindByName(column = "throws")
+    String throwsBall;
+    @CsvBindByName
     private String debut;
-
+    @CsvBindByName
     private String finalGame;
-
+    @CsvBindByName
     private String retroID;
-
+    @CsvBindByName
     private String bbrefID;
 
     public Player() {
@@ -275,5 +272,13 @@ public class Player {
 
     public void setBbrefID(String bbrefID) {
         this.bbrefID = bbrefID;
+    }
+
+    public String getThrowsBall() {
+        return throwsBall;
+    }
+
+    public void setThrowsBall(String throwsBall) {
+        this.throwsBall = throwsBall;
     }
 }

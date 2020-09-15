@@ -1,5 +1,6 @@
 package com.playersDemo.ratelimit;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Semaphore;
@@ -8,8 +9,8 @@ import java.util.concurrent.Semaphore;
 public class SimpleRateLimiter {
     private Semaphore semaphore;
 
-    public SimpleRateLimiter() {
-        semaphore = new Semaphore(5);
+    public SimpleRateLimiter(@Value("${ratelimit.permits}") int permits) {
+        semaphore = new Semaphore(permits);
     }
 
     public boolean tryAcquire() {
