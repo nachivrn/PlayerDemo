@@ -10,4 +10,4 @@ The service should expose two REST endpoints:
 
 The service should expose an additional REST API endpoint:
 
-POST /api/sleep - sleeps for the specified duration in seconds, then returns.
+* POST /api/sleep - sleeps for the specified duration in seconds, then returns.
